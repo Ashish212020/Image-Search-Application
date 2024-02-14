@@ -38,6 +38,7 @@ async function searchImages() {
     page++;
     if (page > 1) {
         showMore.style.display = "block";
+        console.log("hello world");
     }
 }
 

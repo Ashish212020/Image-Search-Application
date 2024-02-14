@@ -1,8 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color:;
     color: #333;
+    background: linear-gradient(to right, #060202, #008cba); /* Example gradient */
 }
 
 h1 {
@@ -10,7 +11,10 @@ h1 {
     font-weight: bold;
     text-align: center;
     margin: 40px 0 30px 0;
-    color: #008cba;
+    background-color: #138065;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 #search-input {
@@ -24,6 +28,7 @@ h1 {
 #search-button {
     background-color: #138065;
     color: #fff;
+    transition: background-color 0.3s ease;
     border: none;
     font-size: 18px;
     border-radius: 5px;
@@ -58,8 +63,9 @@ h1 {
 }
 
 #show-more-button {
-    background-color: #008cba;
+    background-color: #138065;
     color: #fff;
+    transition: background-color 0.3s ease;
     font-size: 18px;
     border: none;
     padding: 10px 20px;
@@ -99,6 +105,11 @@ form {
     margin-bottom: 20px;
     width: 30%;
     height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -115,4 +126,19 @@ form {
     .search-result {
         width: 100%;
     }
+}
+#search-button:hover, #show-more-button:hover {
+    background-color: #008cba;
+}
+.search-result:hover {
+    transform: scale(1.05);
+}
+.search-result a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #008cba;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
 }
